@@ -1,0 +1,3 @@
+ansible [pertern=servers]all  [host-inventory= -i hosts.ini] [module= -m file] [attribute= -a "path=/home/ec2-user/new-dir state=directory"] [become= -b]
+
+ansible all  -i hosts.ini -m file -a "path=/home/ec2-user/new-dir state=directory" -b
