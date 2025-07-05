@@ -1,0 +1,10 @@
+---
+- name: creat a repo
+  host: 
+  become: yes
+
+  task:
+    - name: create a repo
+      file:
+      path:
+      dest:
