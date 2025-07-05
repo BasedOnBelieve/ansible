@@ -8,4 +8,20 @@
     yum:
      name: git
      state: installed
+    
+  - name: install httpd
+    yum:
+      name: httpd
+      state: installed
+
+  - name: start httpd
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+
+  - name: cloning repo
+      git:
+      repo: https://github.com/BasedOnBelieve/food3.git
+      dest: /var/www/html
 ...
