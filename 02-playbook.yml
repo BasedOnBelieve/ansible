@@ -3,7 +3,8 @@
   hosts: all
   become: yes
 
-- tasks: 
-   yum:
-   name: git
+  tasks:
+    yum:
+    name: git
+    state: installed
 ...
