@@ -4,8 +4,8 @@
   become: yes
 
   task:
-    - name: create a repo
-      file:
-      path: /home/ec2-user/new-dir
-      state: directory
+  - name: create a repo
+     file:
+     path: /home/ec2-user/new-dir
+     state: directory
 ...

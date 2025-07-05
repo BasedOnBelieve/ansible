@@ -1,0 +1,9 @@
+---
+- name: deploy a web app
+  hosts: all
+  become: yes
+
+- tasks: 
+   yum:
+   name: git
+...
