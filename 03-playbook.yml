@@ -4,8 +4,8 @@
   become: yes
 
   tasks:
-    name: copy tomcat bin files
+  - name: copy tomcat bin files
     get_url:
-      url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.106/bin/apache-tomcat-9.0.106.tar.gz
-      path: /home/ec2-user
+      url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.107/bin/apache-tomcat-9.0.107.tar.gz
+      dest: /home/ec2-user
 ...
