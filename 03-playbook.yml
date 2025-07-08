@@ -8,7 +8,7 @@
     yum:
       name: java-11
       state: installed
-      
+
   - name: copy tomcat bin files
     get_url:
       url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.107/bin/apache-tomcat-9.0.107.tar.gz
@@ -20,5 +20,9 @@
       remote_src: true
       src: /home/ec2-user/apache-tomcat-9.0.107.tar.gz
       dest: /home/ec2-user/
+  
+  - name: start tomcat
+    shell:
+      cmd: /home/ec2-user/apache-tomcat-9.0.107/bin/startup.sh
 
 ...
