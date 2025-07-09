@@ -8,4 +8,11 @@
     yum:
       name: '*'
       state: latest
+    when: ansible_pkg_mgr == "dnf"
+  
+ - name: update package managers
+    yum:
+      name: '*'
+      state: latest
+    when: ansible_pkg_mgr == "apt"
 ...
