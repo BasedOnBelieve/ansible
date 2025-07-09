@@ -1,0 +1,11 @@
+---
+- name: Deploy a web app on multiple servers
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: update package managers
+    yum:
+      name: '*'
+      state: latest
+...
