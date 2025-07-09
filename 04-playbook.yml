@@ -19,14 +19,14 @@
 
   - name: install httpd
     yum:
-    name: httpd
-    state: present
-    when: ansible_pkg_mgr == "apt"
+     name: httpd
+     state: present
+    when: ansible_pkg_mgr == "dnf"
 
-  - name: install httpd
+  - name: install httpd apache2
     apt:
-    name: apache2
-    state: present
+     name: apache2
+     state: present
     when: ansible_pkg_mgr == "apt"
 
 ...
