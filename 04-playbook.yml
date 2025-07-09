@@ -17,6 +17,18 @@
       state: latest
     when: ansible_pkg_mgr == "apt"
 
+  - name: install git
+    yum:
+     name: git
+     state: present
+    when: ansible_pkg_mgr == "dnf"
+
+  - name: install git
+    apt:
+     name: git
+     state: present
+    when: ansible_pkg_mgr == "apt"
+
   - name: install httpd
     yum:
      name: httpd
@@ -42,5 +54,11 @@
       state: started 
       enabled: yes
     when: ansible_pkg_mgr == "apt"
+  
+  - name: copy html files
+    git:
+      repo: https://github.com/BasedOnBelieve/ecomm-3.git
+      dest: /var/www/html
+    when: ansible_pkg_mgr == "apt" or ansible_pkg_mgr == "dnf"
 
 ...
