@@ -10,9 +10,11 @@
       state: latest
     when: ansible_pkg_mgr == "dnf"
   
-  - name: update package managers
+  - name: Update all packages (Debian/Ubuntu)
     apt:
-      name: '*'
+      update_cache: yes
+      upgrade: full
       state: latest
     when: ansible_pkg_mgr == "apt"
+
 ...
