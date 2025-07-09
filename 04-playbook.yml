@@ -17,4 +17,16 @@
       state: latest
     when: ansible_pkg_mgr == "apt"
 
+  - name: install httpd
+    yum:
+    name: httpd
+    state: present
+    when: ansible_pkg_mgr == "apt"
+
+  - name: install httpd
+    apt:
+    name: apache2
+    state: present
+    when: ansible_pkg_mgr == "apt"
+
 ...
