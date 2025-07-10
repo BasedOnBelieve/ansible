@@ -1,7 +1,9 @@
 ---
-- name: copy a static webpage to nodes using template module
+- name: copy a dynamically using template module
   hosts: all
   become: yes
+  vars: 
+    host_user: believe mene
 
   tasks:
     - name: update webpage
