@@ -1,0 +1,11 @@
+---
+- name: copy a static webpage to nodes
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: update webpage
+      template:
+        src: dynamic.j2
+        dest: /var/www/html/dynamic.html
+...
