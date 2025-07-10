@@ -6,6 +6,6 @@
   tasks:
     - name: update webpage
       copy:
-        src:
-        dest:
+        src: static.html
+        dest: /var/www/html
 ...
