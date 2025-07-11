@@ -1,3 +1,16 @@
 ---
 # handlers file for httpd
-- name: install httpd
+
+- name: install httpd and start 
+  hosts: 
+
+  - name: install httpd
+    yum:
+      name: httpd
+
+  - name: start and enable httpd
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+...
