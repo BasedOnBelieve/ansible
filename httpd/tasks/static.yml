@@ -1,0 +1,7 @@
+---
+
+    - name: update webpage
+      copy:
+        src: static.html
+        dest: /var/www/html
+...
