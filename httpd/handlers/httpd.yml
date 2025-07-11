@@ -1,9 +1,6 @@
 ---
 # handlers file for httpd
 
-- name: install httpd and start 
-  hosts: 
-
   - name: install httpd
     yum:
       name: httpd
