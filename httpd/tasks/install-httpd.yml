@@ -4,6 +4,7 @@
   - name: install httpd
     yum:
       name: httpd
+      state: installed
 
   - name: start and enable httpd
     service:

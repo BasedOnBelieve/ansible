@@ -1,2 +1,5 @@
 ---
 # tasks file for httpd
+- import_task: install-httpd.yml
+- import_task: static.yml
+- import_task: dynamic.yml

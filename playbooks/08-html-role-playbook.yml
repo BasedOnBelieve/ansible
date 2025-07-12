@@ -1,0 +1,8 @@
+---
+- name: copy a static webpage to nodes using template module
+  hosts: all
+  become: yes
+
+  roles:
+    - httpd
+...
