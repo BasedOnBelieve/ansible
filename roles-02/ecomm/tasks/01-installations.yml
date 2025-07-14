@@ -15,8 +15,13 @@
     yum:
       name: httpd
       state: installed
-      enabled: yes
     when: ansible_pkg_mgr == 'dnf'
+
+  - name: install java
+    apt:
+      name: openjdk-11-jdk
+      state: present
+    when: ansible_pkg_mgr == 'apt'
   
   - name: Install apache2
     apt:
@@ -35,8 +40,5 @@
       name: git
     when: ansible_pkg_mgr == 'dnf'
   
-  - name: install java
-    apt:
-      name: openjdk-11-jdk
-      state: present
+
 ...
