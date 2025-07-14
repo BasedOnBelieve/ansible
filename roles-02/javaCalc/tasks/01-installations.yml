@@ -1,0 +1,44 @@
+---
+  - name: update yum pkg manager
+    yum:
+      update_only: yes
+      state: latest
+    when: ansible_pkg_mgr == 'dnf'
+
+  - name: update ubuntu pkg manager
+    apt:
+      update_cache: yes
+      state: latest
+    when: ansible_pkg_mgr == 'apt'
+
+  - name: installations of httpd
+    yum:
+      name: httpd
+      state: installed
+    when: ansible_pkg_mgr == 'dnf'
+
+  - name: install java
+    apt:
+      name: openjdk-11-jdk
+      state: present
+    when: ansible_pkg_mgr == 'apt'
+  
+  - name: Install apache2
+    apt:
+      name: apache2
+      state: installed
+      enabled: yes
+    when: ansible_pkg_mgr == 'apt'
+
+  - name: install git on amazon linux
+    yum:
+      name: git
+    when: ansible_pkg_mgr == 'dnf'
+  
+  - name: install git on ubuntu
+    apt:
+      name: git
+    when: ansible_pkg_mgr == 'dnf'
+  
+
+...
