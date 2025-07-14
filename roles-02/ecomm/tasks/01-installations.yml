@@ -1,0 +1,6 @@
+- name: installations of apps
+  yum:
+    name: httpd
+    state: installed
+    enabled: yes
+  when ansible_distr
