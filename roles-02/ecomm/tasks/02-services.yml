@@ -1,16 +1,16 @@
 ---
-# tasks file for ecomm
-- name: start and enable httpd
-  service:
-    name: httpd
-    state: started
-    enabled: yes
-  when: ansible_pkg_mgr == 'dnf'
+  # tasks file for ecomm
+  - name: start and enable httpd
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+    when: ansible_pkg_mgr == 'dnf'
 
-- name: start and enable apache2
-  service:
-    name: apache2
-    state: started
-    enabled: yes
-  when: ansible_pkg_mgr == 'apt'
+  - name: start and enable apache2
+    service:
+      name: apache2
+      state: started
+      enabled: yes
+    when: ansible_pkg_mgr == 'apt'
 ...
