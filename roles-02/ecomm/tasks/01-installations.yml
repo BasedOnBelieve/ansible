@@ -37,5 +37,6 @@
   
   - name: install java
     apt:
-      name:
+      name: openjdk-11-jdk
+      state: present
 ...
