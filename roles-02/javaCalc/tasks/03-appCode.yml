@@ -3,5 +3,5 @@
 - name: clone git repo to web-server
   git:
     repo: https://github.com/BasedOnBelieve/food3.git
-    dest: /var/www/html/food
+    dest: /var/www/html/food/
 ...
