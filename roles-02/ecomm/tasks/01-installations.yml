@@ -1,6 +1,15 @@
-- name: installations of apps
-  yum:
-    name: httpd
-    state: installed
-    enabled: yes
-  when ansible_distr
+---
+  - name: installations of httpd
+    yum:
+      name: httpd
+      state: installed
+      enabled: yes
+    when: ansible_pkg_mgr == 'dnf'
+  
+  - name: Install apache2
+    apt:
+      name: apache2
+      state: installed
+      enabled: yes
+    when: ansible_pkg_mgr == 'apt'
+...
