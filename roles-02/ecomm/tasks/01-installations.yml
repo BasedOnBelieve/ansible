@@ -12,4 +12,14 @@
       state: installed
       enabled: yes
     when: ansible_pkg_mgr == 'apt'
+
+  - name: install git on amazon linux
+    yum:
+      name: git
+    when: ansible_pkg_mgr == 'dnf'
+  
+  - name: install git on ubuntu
+    apt:
+      name: git
+    when: ansible_pkg_mgr == 'dnf'
 ...
