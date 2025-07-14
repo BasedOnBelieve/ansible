@@ -26,7 +26,7 @@
 - name: Install apache2
   apt:
     name: apache2
-    state: installed
+    state: present
   when: ansible_pkg_mgr == 'apt'
 
 - name: install git on amazon linux
