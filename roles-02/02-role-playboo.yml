@@ -2,7 +2,7 @@
 - name: httpd-apache2 playbook
   hosts: all
   become: yes
-  role:
+  roles:
     - ecomm
     - javaCalc
 ...
