@@ -1,4 +1,16 @@
 ---
+  - name: update yum pkg manager
+    yum:
+      update_only: yes
+      state: latest
+    when: ansible_pkg_mgr == 'dnf'
+
+  - name: update ubuntu pkg manager
+    apt:
+      update_cache: yes
+      state: latest
+    when: ansible_pkg_mgr == 'apt'
+
   - name: installations of httpd
     yum:
       name: httpd
@@ -22,4 +34,8 @@
     apt:
       name: git
     when: ansible_pkg_mgr == 'dnf'
+  
+  - name: install java
+    apt:
+      name:
 ...
