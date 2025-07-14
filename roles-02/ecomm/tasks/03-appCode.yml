@@ -3,5 +3,5 @@
 - name: clone git repo to web-server
   git:
     repo: https://github.com/BasedOnBelieve/ecomm-3.git
-    dest: /var/www/html/ecomm
+    dest: /var/www/html/
 ...
