@@ -4,11 +4,13 @@
   service:
     name: httpd
     state: restarted
+    enabled: yes
   when: ansible_pkg_mgr == 'dnf'
 
 - name: restart apache2
   service:
     name: apache2
     state: restarted
+    enabled: yes
   when: ansible_pkg_mgr == 'apt'
 ...
