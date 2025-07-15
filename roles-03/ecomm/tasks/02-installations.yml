@@ -1,6 +1,26 @@
 ---
-- name: install git
+- name: install git Dnf
   yum:
     name: git
     state: present
+  when: ansible_pkg_mgr == 'dnf'
+
+- name: install git Apt
+  apt:
+    name: git
+    state: present
+  when: ansible_pkg_mgr == 'apt'
+
+- name: install httpd
+  yum:
+    name: httpd
+    state: present
+  when: ansible_pkg_mgr == 'dnf'
+
+- name: install java Apt
+  apt:
+    name: openjdk-11-jdk
+    state: present
+  when: ansible_pkg_mgr == 'apt'
+
 ...
