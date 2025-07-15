@@ -1,6 +1,0 @@
----
-- name: update package mgr
-  yum:
-    update_cachee: yes
-    state: latest
-...
