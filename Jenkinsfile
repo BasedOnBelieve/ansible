@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '''
                     cd ~
-                    ansible-playbook -i /others/hosts.ini 03-role-playbook.yml
+                    /ansible/ansible-playbook -i /others/hosts.ini 03-role-playbook.yml
                 '''
             }
         }
