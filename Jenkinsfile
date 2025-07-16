@@ -7,8 +7,8 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/BasedOnBelieve/food3.git'
             }
         }
-
         stage('Run Ansible Playbook') {
+            agent { label 'ansible' }
             steps {
                 sh '''
                     cd ansible
