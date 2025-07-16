@@ -11,7 +11,7 @@ pipeline {
             agent { label 'ansible' }
             steps {
                 sh '''
-                    cd ansible
+                    cd ~
                     ansible-playbook -i /others/hosts.ini 03-role-playbook.yml
                 '''
             }
