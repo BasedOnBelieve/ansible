@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Code') {
             agent { label 'build' } // This runs on Jenkins build node
             steps {
-                git branch: 'main', url: 'https://github.com/BasedOnBelieve/food3.git'
+                git branch: 'master', url: 'https://github.com/BasedOnBelieve/ecomm-3.git'
             }
         }
 
