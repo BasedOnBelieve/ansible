@@ -1,8 +1,8 @@
 ---
-- name: 
+- name: copy html file to web
   hosts:
   become: yes
 
     roles:
-      02-role-playbook.yml
+      - ecomm
 ...
