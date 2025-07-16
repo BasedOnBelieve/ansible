@@ -13,6 +13,7 @@ pipeline {
             agent { label 'ansible' } // This runs on the Ansible server
             steps {
                 sh '''
+                    ls
                     cd ~/ansible
                     ansible-playbook -i others/hosts.ini 03-role-playbook.yml
                 '''
