@@ -1,6 +1,6 @@
 ---
 - name: copy html file to web
-  hosts: web
+  hosts: ecom
   become: yes
 
   roles:
