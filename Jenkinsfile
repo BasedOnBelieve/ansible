@@ -14,7 +14,7 @@ pipeline {
             steps {
                 ansiblePlaybook(
                     credentialsId: 'ansible', disableHostKeyChecking: true, inventory: 
-                    'ansible/others/hosts.ini', playbook: '/home/ec2-user/ansible/03-role-playbook.yml'
+                    '/others/hosts.ini', playbook: '03-role-playbook.yml'
                 )
             }
         }
