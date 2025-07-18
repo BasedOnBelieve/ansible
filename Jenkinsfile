@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Clone Code') {
-            agent { label 'build' }
+            agent any
             steps {
                 git branch: 'master', url: 'https://github.com/BasedOnBelieve/ecomm-3.git'
             }
