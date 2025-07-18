@@ -1,4 +1,4 @@
 ---
   # tasks file for ecomm
-- import_tasks: 04-copyfiles.yml
+- import_tasks: 02-installations
 ...
