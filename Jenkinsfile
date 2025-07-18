@@ -1,21 +1,17 @@
 pipeline {
-    agent none
+    agent any
 
     stages {
         stage('Clone Code') {
-            agent { label 'build' } // This runs on Jenkins build node
             steps {
                 git branch: 'master', url: 'https://github.com/BasedOnBelieve/ecomm-3.git'
             }
         }
 
         stage('Run Ansible Playbook') {
-            agent { label 'ansible' } // This runs on the Ansible server
             steps {
-                sh '''
-                    cd ansible/
-
-                    ansible-playbook -i others/hosts.ini 03-role-playbook.yml
+                    ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, inventory: 
+                    '/home/ec2-user/ansible/others/hosts.ini', playbook: 'home/ec2-user/ansible/03-role-playbook.yml'
                 '''
             }
         }
