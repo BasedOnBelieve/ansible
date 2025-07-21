@@ -1,8 +1,0 @@
----
-- name: 
-  hosts:
-  become: yes
-
-    roles:
-      02-role-playbook.yml
-...
