@@ -1,0 +1,7 @@
+---
+- name: copy config file
+  bcome: yes
+
+  roles:
+    - roles-04
+...
