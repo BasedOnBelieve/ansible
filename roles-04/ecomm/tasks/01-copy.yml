@@ -2,7 +2,7 @@
   # tasks file for ecomm
 - name: copy config file
   copy:
-    src: /roles-04/files/ansible.cfg
+    src: /roles-04/ansible.cfg
     dest: /etc/ansible/ansible.cfg
     owner: root
     group: root
