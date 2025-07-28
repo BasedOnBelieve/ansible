@@ -1,2 +1,4 @@
 ---
 # vars file for ecomm
+ansible_user: ubuntu
+ansible_ssh_key_file =~/test.pem
