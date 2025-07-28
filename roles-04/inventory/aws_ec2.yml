@@ -4,5 +4,6 @@ regions:
   - us-east-1
 filters:
 hostnames:
-  - tag:Name=web
-...
+  - tag:env:
+    - amz
+    - ubuntu
