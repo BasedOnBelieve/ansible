@@ -1,8 +1,10 @@
 ---
   # tasks file for ecomm
 - name: copy config file
-  file:
+  copy:
     src: ansible.cgf
     dest: /etc/ansible/
-    mode: file
+    owner: root
+    group: root
+    mode: '0644'
 ...
