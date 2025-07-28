@@ -1,6 +1,7 @@
 ---
 - name: copy config file
-  bcome: yes
+  hosts: localhost
+  become: yes
 
   roles:
     - roles-04
