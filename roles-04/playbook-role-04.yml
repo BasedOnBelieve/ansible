@@ -1,5 +1,13 @@
 ---
-- name: copy config file
+- name: ansible_master
+  hosts: localhost
+  become: yes
+
+  roles:
+    - role-04/ansible_master
+
+
+- name: installations on nodes
   hosts: all
   become: yes
 
