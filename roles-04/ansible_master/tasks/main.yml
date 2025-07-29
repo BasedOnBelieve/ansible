@@ -1,11 +1,5 @@
 ---
   # tasks file for ecomm
 - import_tasks: 01-update-pkg-mgrs.yml
-- name: Template ansible.cfg locally
-  template:
-    src: ansible.j2
-    dest: /etc/ansible/ansible.cfg
-    owner: root
-    group: root
-    mode: '0644'
+- import_tasks: 00-copy.yml
 ...
