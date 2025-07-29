@@ -3,7 +3,7 @@
   yum:
     update_cachee: yes
     state: latest
-  when: ansibleansible_pkg_mgr == 'dnf'
+  when: ansible_pkg_mgr == 'dnf'
 
 - name: update Apt package mgr
   apt:
