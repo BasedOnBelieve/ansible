@@ -4,7 +4,7 @@
   become: yes
 
   roles:
-    - role-04/ansible_master
+    - ansible_master
 
 
 - name: installations on nodes
