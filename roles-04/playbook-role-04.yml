@@ -5,4 +5,5 @@
 
   roles:
     - roles-04/ecomm
+    - role-04/javaCalc
 ...
