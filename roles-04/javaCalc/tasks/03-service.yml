@@ -7,7 +7,6 @@
   when: ansible_pkg_mgr == 'dnf'
 
 - name: start tomcat
-  shell:
-    executable: /etc/apache-tomcat-9.0.107/bin/startup.sh
+  shell: /etc/apache-tomcat-9.0.107/bin/startup.sh
   when: ansible_pkg_mgr == 'apt'
 ...
