@@ -1,10 +1,10 @@
 ---
   # tasks file for ecomm
-- name: copy config file
-  copy:
-    src: /roles-04/ansible.cfg
+- name: Template a file to /etc/file.conf
+  template:
+    src: ansible.j2
     dest: /etc/ansible/ansible.cfg
     owner: root
     group: root
-    mode: '0644'
+    mode: '0644
 ...
