@@ -1,11 +1,4 @@
 ---
-- name: ansible_master
-  hosts: localhost
-  become: yes
-
-  roles:
-    - ansible_master
-
 
 - name: installations on nodes
   hosts: all
