@@ -4,5 +4,5 @@
   become: yes
 
   roles:
-    - roles-04/ecomm
+    - ecomm
 ...
