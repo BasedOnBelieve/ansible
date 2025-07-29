@@ -1,6 +1,6 @@
 ---
 - name: copy config file
-  hosts: localhost
+  hosts: all
   become: yes
 
   roles:
