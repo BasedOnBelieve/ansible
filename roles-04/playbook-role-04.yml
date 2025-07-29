@@ -12,6 +12,6 @@
   become: yes
 
   roles:
-    - roles-04/ecomm
-    - roles-04/javaCalc
+    - ecomm
+    - javaCalc
 ...
