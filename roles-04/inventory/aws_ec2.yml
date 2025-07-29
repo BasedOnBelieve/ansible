@@ -4,4 +4,5 @@ regions:
   - us-east-1
 keyed_groups:
   - key: tags.env
+    prefix: server
 ...
