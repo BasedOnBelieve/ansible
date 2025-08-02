@@ -1,5 +1,5 @@
 pipeline {
-    agent{label 'ans'}
+    agent {label 'ans'}
 
     stages {
         stage('Run Ansible Playbook') {
