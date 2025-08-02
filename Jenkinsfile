@@ -1,13 +1,13 @@
 pipeline {
-    agent none
+    agent {label 'deploy'}
 
     stages {
-       // stage('Clone Code') {
-            agent { label 'build' }
+       /* stage('Clone Code') {
+       //     agent { label 'build' }
             steps {
                 git branch: 'master', url: 'https://github.com/BasedOnBelieve/ecomm-3.git'
             }
-        }//
+        }*/
 
         stage('Run Ansible Playbook') {
             agent { label 'ansible' }
