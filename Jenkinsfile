@@ -1,6 +1,6 @@
 pipeline {
     agent 
-        {label 'Ans'}
+        {label 'ans'}
 
     stages {
         stage('Run Ansible Playbook') {
