@@ -1,9 +1,13 @@
 pipeline {
-    agent {
-        label 'ans'
-    }
+    agent { label 'ans' }
 
-     stages {
+    stages {
+        stage( 'Checkout') {
+            steps {
+                Checkout scm
+            }
+        }
+
         stage('Run Ansible Playbook') {
             steps{  
                 ansiblePlaybook( credentialsId: 'ansible', installation: 'ansible', 
@@ -11,5 +15,6 @@ pipeline {
             )
             }
         }
+
     }
 }
