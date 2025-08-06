@@ -25,7 +25,7 @@
 
 - name: install Tomcat
   get_url: 
-    url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.107/bin/apache-tomcat-9.0.107.tar.gz
+    url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.108/bin/apache-tomcat-9.0.108.tar.gz
     dest: /etc/apache.tar.gz
     mode: '0755'
   when: ansible_pkg_mgr == 'apt'
