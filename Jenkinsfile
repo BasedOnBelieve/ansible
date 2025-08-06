@@ -2,7 +2,7 @@ pipeline {
     agent 
         {label 'ans'}
 
-    stages {
+     stages {
         stage('Run Ansible Playbook') {
             steps{  
                 ansiblePlaybook( credentialsId: 'ansible', installation: 'ansible', 
